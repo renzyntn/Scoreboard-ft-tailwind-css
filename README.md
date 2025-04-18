@@ -1,2 +1,2 @@
-# Scoreboard-ft-tailwind-css
+# Scoreboard
 Just for fun Scoreboard using tailwind as CSS Framework
