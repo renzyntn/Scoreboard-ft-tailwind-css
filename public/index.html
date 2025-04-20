@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./style.css" rel="stylesheet" />
+    <title>Scoreboard</title>
+  </head>
+  <body class="bg-zinc-100 ">
+    <div class="h-screen flex items-center justify-center">
+      <div class="w-105 h-120 flex flex-col mx-auto px-4">
+        
+        <div class="flex bg-gray-700 items-center justify-between p-4">
+          <div class="text-center w-1/2">
+            <h2 class="text-4xl font-semibold py-2 text-white">HOME</h2>
+            <div id="h-score" class="bg-black rounded-xl mt-1 py-10 text-red-500 text-5xl font-mono w-32 h-32 mx-auto">00</div>
+          </div>
+          <div class="text-center w-1/2">
+            <h2 class="text-4xl font-semibold py-2 text-white">AWAY</h2>
+            <div id="g-score" class="bg-black rounded-xl mt-1 py-10 text-red-500 text-5xl font-mono w-32 h-32 mx-auto">00</div>
+          </div>
+
+        </div>
+
+        <p id="prev-score" class="font-semibold text-xl text-center mt-1.5">Previous:</p>
+
+        <div class="flex-1 bg-zinc-100 flex flex-col gap-5 p-4">
+          <div class="flex justify-between gap-2 font-semibold">
+            <button id="h-1pt" onclick="addHome1Point()" class="bg-green-500 hover:bg-green-600 active:bg-green-700 text-green-800 w-24 py-2 rounded-full">+1</button>
+            <button id="reset-btn" onclick="resetPoints()" class="bg-sky-400 hover:bg-sky-500 active:bg-sky-600 text-white w-24 py-2 rounded-full">Reset</button>
+            <button id="g-1pt" onclick="addGuest1Point()" class="bg-green-500 hover:bg-green-600 active:bg-green-700 text-green-800 w-24 py-2 rounded-full">+1</button>
+          </div>
+
+          <div class="flex justify-between gap-2 font-semibold">
+            <button id="h-2pt" onclick="addHome2Point()" class="bg-green-500 hover:bg-green-600 active:bg-green-700 text-green-800 w-24 py-2 rounded-full">+2</button>
+            <button id="homeminus-btn" onclick="minusHomePts()" class="bg-sky-400 hover:bg-sky-500 active:bg-sky-600 text-white w-24 py-2 rounded-full">H -</button>
+            <button id="g-2pt" onclick="addGuest2Point()" class="bg-green-500 hover:bg-green-600 active:bg-green-700 text-green-800 w-24 py-2 rounded-full">+2</button>
+          </div>
+
+          <div class="flex justify-between gap-2 font-semibold">
+            <button id="h-3pt" onclick="addHome3Point()" class="bg-green-500 hover:bg-green-600 active:bg-green-700 text-green-800 w-24 py-2 rounded-full">+3</button>
+            <button id="guestminus-btn" onclick="minusGuestPts()" class="bg-sky-400 hover:bg-sky-500 active:bg-sky-600 text-white w-24 py-2 rounded-full">G -</button>
+            <button id="g-3pt" onclick="addGuest3Point()" class="bg-green-500 hover:bg-green-600 active:bg-green-700 text-green-800 w-24 py-2 rounded-full">+3</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
