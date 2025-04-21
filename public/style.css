@@ -254,6 +254,9 @@
   .border-collapse {
     border-collapse: collapse;
   }
+  .touch-manipulation {
+    touch-action: manipulation;
+  }
   .resize {
     resize: both;
   }
