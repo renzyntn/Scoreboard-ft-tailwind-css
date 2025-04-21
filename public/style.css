@@ -367,6 +367,12 @@
       }
     }
   }
+  .focus\:outline-none {
+    &:focus {
+      --tw-outline-style: none;
+      outline-style: none;
+    }
+  }
   .active\:scale-90 {
     &:active {
       --tw-scale-x: 90%;
