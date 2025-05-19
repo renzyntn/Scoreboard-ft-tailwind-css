@@ -18,7 +18,8 @@ const homeMinusFx = document.getElementById("homeminus-btn");
 const guestMinusFx = document.getElementById("guestminus-btn");
 let isBtnClicked = false;
 
-function addHome1Point() {
+
+home1PtFx.addEventListener("click", function() {
     homeScore += 1;
     homePts.innerText = formatScore(homeScore);
     prevScore.innerText = "Previous: H – " + formatScore(homeScore);
@@ -32,9 +33,9 @@ function addHome1Point() {
             isBtnClicked = false;
         }, 100);
     }
-}
+});
 
-function addHome2Point() {
+home2PtFx.addEventListener("click", function() {
     homeScore += 2;
     homePts.innerText = formatScore(homeScore);
     prevScore.innerText = "Previous: H – " + formatScore(homeScore);
@@ -48,9 +49,9 @@ function addHome2Point() {
             isBtnClicked = false;
         }, 100);
     }
-}
+});
 
-function addHome3Point() {
+home3PtFx.addEventListener("click", function() {
     homeScore += 3;
     homePts.innerText = formatScore(homeScore);
     prevScore.innerText = "Previous: H – " + formatScore(homeScore);
@@ -64,9 +65,9 @@ function addHome3Point() {
             isBtnClicked = false;
         }, 100);
     }
-}
+});
 
-function addGuest1Point() {
+guest1PtFx.addEventListener("click", function() {
     guestScore += 1;
     guestPts.innerText = formatScore(guestScore);
     prevScore.innerText = "Previous: G – " + formatScore(guestScore);
@@ -80,9 +81,9 @@ function addGuest1Point() {
             isBtnClicked = false;
         }, 100);
     }
-}
+});
 
-function addGuest2Point() {
+guest2PtFx.addEventListener("click", function() {
     guestScore += 2;
     guestPts.innerText = formatScore(guestScore);
     prevScore.innerText = "Previous: G – " + formatScore(guestScore);
@@ -96,9 +97,9 @@ function addGuest2Point() {
             isBtnClicked = false;
         }, 100);
     }
-}
+});
 
-function addGuest3Point() {
+guest3PtFx.addEventListener("click", function() {
     guestScore += 3;
     guestPts.innerText = formatScore(guestScore);
     prevScore.innerText = "Previous: G – " + formatScore(guestScore);
@@ -112,9 +113,9 @@ function addGuest3Point() {
             isBtnClicked = false;
         }, 100);
     }
-}
+});
 
-function resetPoints() {
+resetFx.addEventListener("click", function() {
     homeScore = 0;
     guestScore = 0;
 
@@ -131,13 +132,13 @@ function resetPoints() {
             isBtnClicked = false;
         }, 100);
     }
-}
+});
 
 function formatScore(score) {
     return score.toString().padStart(2, "0");
 }
 
-function minusHomePts() {
+homeMinusFx.addEventListener("click", function() {
     if (homeScore > 0) {
         homeScore -= 1;
         homePts.innerText = formatScore(homeScore);
@@ -155,9 +156,9 @@ function minusHomePts() {
             isBtnClicked = false;
         }, 100);
     }
-}
+});
 
-function minusGuestPts() {
+guestMinusFx.addEventListener("click", function() {
     if (guestScore > 0) {
         guestScore -= 1;
         guestPts.innerText = formatScore(guestScore);
@@ -175,4 +176,4 @@ function minusGuestPts() {
             isBtnClicked = false;
         }, 100);
     }
-}
+});
